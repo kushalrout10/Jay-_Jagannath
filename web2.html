@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2nd Web</title>
+        <style>
+        body {
+            margin: 0;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #fff4d0;
+            color: #333;
+            padding: 0;
+            height: 100%;
+        }
+        img {
+        object-fit: fill;
+        }
+        .hero {
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 5px #000000;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        button.learn-more {
+          width: 200px;
+          height: 50px;
+          border-radius: 40%;
+          background-color: transparent;
+          padding: 0 0 0 0;
+          margin: 0 0 0 0;
+          border-radius: 1.625rem;
+          border-color: #fff8f0;
+          
+         }
+             button.learn-more .circle {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              position: relative;
+              display: block;
+              margin: 0;
+              width: 3rem;
+              height: 3rem;
+              background: #373737;
+              border-radius: 1.625rem;
+             }
+             
+             button.learn-more .circle .icon {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              background: #fff;
+             }
+             
+            button.learn-more .circle .icon.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+             }
+             
+             button.learn-more .circle .icon.arrow::before {
+              position: absolute;
+              content: "";
+              top: -0.29rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff8f0;
+              border-right: 0.125rem solid #fff8f0;
+              transform: rotate(45deg);
+             }
+             
+             .button-text {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              position: absolute;
+              top: 342px;
+              left: 7px;
+              right: 0px;
+              bottom: 0;
+              padding: 0.75rem 0;
+              margin: 0 0 0 1.85rem;
+              color: #000000;
+              font-weight: 700;
+              font-size: 17.5px;
+              line-height: 1.6;
+              text-align: center;
+              text-transform: uppercase;
+              text-decoration: none;
+              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+             }
+             
+             button:hover .circle {
+              width: 100%;
+             }
+             
+             button:hover .circle .icon.arrow {
+              background: #fff;
+              transform: translate(1rem, 0);
+             }
+             
+             button:hover .button-text {
+              color: #ffffff;
+             }
+
+</style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <nav class="golden-navbar">
+          <div class="left-section">
+            <img src="c:\Users\MAA\Downloads\Screenshot 2025-05-06 134532-modified.png" alt="Jagannath Logo" class="logo">
+            <span class="logo-text">Jagannath</span>
+          </div>
+          <ul class="right-section">
+            <li><a href="web1.html"><i class="fa fa-arrow-left"></i><span>Back</span></a></li>
+            <li><a href="#"><span class="om-symbol">ॐ</span><span>About</span></a></li>
+            <li><a href="#"><i class="fa fa-calendar-day"></i><span>Festivals</span></a></li>
+            <li><a href="web2.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+            <li><a href="#"><i class="fa fa-images"></i><span>Gallery</span></a></li>
+            <li><a href="#"><i class="fa fa-question-circle"></i><span>FAQ</span></a></li>
+            <li><a href="#"><i class="fa fa-phone"></i><span>Contact</span></a></li>
+          </ul>
+        </nav>
+        
+        <!-- CSS -->
+        <style>
+        .golden-navbar {
+          background-color: #970000;
+          border-top: 4px solid gold;
+          border-bottom: 4px solid gold;
+          padding: 12px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .left-section {
+          display: flex;
+          align-items: center;
+        }
+        
+        .left-section .logo {
+          width: 40px; /* Adjust the size of the logo */
+          height: auto;
+          margin-right: 10px; /* Space between logo and text */
+        }
+        
+        .left-section .logo-text {
+          color: #ffd700;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+        .golden-navbar ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+        
+        .golden-navbar li {
+          display: inline-block;
+          margin: 0 15px;
+        }
+        
+        .golden-navbar a {
+          color: #ffd700;
+          font-size: 16px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: 0.3s ease;
+          text-align: center;  /* Center the text */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .golden-navbar a i {
+          font-size: 20px;
+          margin-bottom: 4px;
+          display: block;
+        }
+        
+        .golden-navbar a:hover {
+          color: #ffffff;
+          text-shadow: 0 0 10px #ffd700;
+        }
+        
+        .golden-navbar a .om-symbol {
+          font-size: 24px;  /* Adjust size of Om symbol */
+          margin-right: 8px;
+          margin: -4px;  /* Space between symbol and text */
+        }
+        </style>
+        
+
+    <section class="hero">
+            <h1>Experience the Divine Journey</h1>
+            <p>Embrance devotion, love, and unity.</p>
+            <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+      <a href="#about" class="button-text">Explore More</a>
+      </button>
+    </section>
+    <a href = "web3.html">
+    <button class="button-with-icon" >
+      <svg
+        class="icon"
+        id="Play"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="color000000 svgShape"
+          fill="#ffffff"
+          d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
+      </svg>
+      <span class="text">Play</span></button></a>
+    <style>
+      .button-with-icon {
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #0098cb;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        letter-spacing: 1px;
+        padding: 0 12px;
+        text-align: center;
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: normal;
+        border-radius: 3px;
+        outline: none;
+        user-select: none;
+        cursor: pointer;
+        transform: translateY(0px);
+        position: relative;
+        box-shadow:
+          inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+          inset 0 1px 20px rgba(0, 0, 0, 0),
+          0 3px 0 #0098cb,
+          0 3px 2px rgba(0, 0, 0, 0.2),
+          0 5px 10px rgba(0, 0, 0, 0.1),
+          0 10px 20px rgba(0, 0, 0, 0.1);
+        background: #cb0069;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+        transition: 150ms all ease-in-out;
+        left: 713px;
+        top: -20px;
+      }
+      
+      .button-with-icon .icon {
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+        transition: all 0.5s ease-in-out;
+        
+      }
+      
+      .button-with-icon:active {
+        transform: translateY(3px);
+        box-shadow:
+          inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+          inset 0 1px 20px rgba(0, 0, 0, 0.1),
+          0 0 0 #0098cb,
+          0 0 0 2px rgba(255, 255, 255, 0.5),
+          0 0 0 rgba(0, 0, 0, 0),
+          0 0 0 rgba(0, 0, 0, 0);
+      }
+      
+      .button-with-icon:hover .text {
+        transform: translateX(80px);
+      }
+      .button-with-icon:hover .icon {
+        transform: translate(23px);
+      }
+      
+      .text {
+        transition: all 0.5s ease-in-out;
+      }
+    </style>
+    </body>
+</html>

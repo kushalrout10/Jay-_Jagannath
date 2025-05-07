@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1st Web</title>
+        <link rel="stylesheet" href="web1.css">
+    </head>
+    <body background = "c:\Users\MAA\OneDrive\Pictures\Screenshots\Screenshot 2025-05-06 130100.png">
+      <header class = "h1">
+      <h1>WEL</h1>
+      </header>
+        <div class="box">
+          <div class = "boxinside">
+              <img src = "C:\Users\MAA\OneDrive\Pictures\Camera Roll\1000073373.jpg">
+          </div>
+        </div>
+        <button class = "button" id="startButton"><h1>Jay Jagannath</h1></button>
+        <div id="flowerContainer"></div>
+        <script>
+          const flowerContainer = document.getElementById("flowerContainer");
+          const startButton = document.getElementById("startButton");
+          
+          // List of various flower emojis
+          const flowers = ["🌸", "🌺", "💮", "🏵️"];
+          
+          startButton.addEventListener("click", () => {
+            for (let i = 0; i < 40; i++) {
+              const flower = document.createElement("div");
+              flower.classList.add("flower");
+          
+              // Random flower
+              flower.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+          
+              // Random position and animation
+              flower.style.left = Math.random() * 100 + "vw";
+              flower.style.animationDuration = (3 + Math.random() * 2) + "s";
+              flower.style.fontSize = (24 + Math.random() * 20) + "px";
+          
+              flowerContainer.appendChild(flower);
+          
+              // Remove after animation
+              setTimeout(() => {
+                flower.remove();
+              }, 6000);
+            }
+          });
+          
+        </script>
+        <button class = "select">
+            <label for="touch"><span><h2>Select Your Language</h2></span></label>              
+  <input type="checkbox" id="touch">
+  <ul class="slide">
+    <li><a href="web5.html" style="text-decoration: none; color: inherit;">ଓଡ଼ିଆ</a></li>
+    <li><a href="web4.html" style="text-decoration: none; color: inherit;">हिंदी</a></li>
+    <li><a href="web2.html" style="text-decoration: none; color: inherit;">English</a></li>
+  </ul>
+  </button>
+  <header class = "h2">
+    <h1>COME</h1>
+  </header>
+    </body>
+</html>
